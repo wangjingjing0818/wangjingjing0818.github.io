@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Hexo"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Hexo"/>
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://yoursite.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Hexo</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Untitled Post</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2017-04-09</span>
+            <span class="time">15:34:55</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="css2中的所有属性都是即时效果"><a href="#css2中的所有属性都是即时效果" class="headerlink" title="css2中的所有属性都是即时效果"></a>css2中的所有属性都是即时效果</h1><h1 id="transition-过渡动画属性"><a href="#transition-过渡动画属性" class="headerlink" title="transition 过渡动画属性"></a>transition 过渡动画属性</h1><p> 语法：当css属性发生改变时，在一定时间内有起始值向结束值之间实现平滑过渡的动画效果<br>   特点：1，只有两种状态，起始状态和结束状态<br>         2，需要触发条件，例如：js，伪类，媒体查询等；<br>   细分属性：<br>            transition-property  过渡属性 （all,默认值，所有属性）<br>            transition-duration  动画执行的时间<br>            transition-timing-function 动画类型（动画运行的速度）<br>            ease（默认值）|linear|ease-in(进入时减速)|ease-out(出去是加速)|ease-in-out(先加速再加速)贝塞尔曲线cubic-bezier(x,x,y,y)<br>            transition-delay 延迟时间<br>            复合写法：transition:all 1s linear 1s;<br>            过渡动画效果的分析步骤：<br>            1，确定过渡属性<br>            2，找到过渡属性的起始值和结束值<br>            3，在合适的位置上添加transition属性</p>
+<h3 id="transform"><a href="#transform" class="headerlink" title="transform"></a>transform</h3><p>  2D变形方法<br>   旋转：transform:rotate(45deg)正 顺时针   负值 逆时针；<br>   放大缩小：transform:scale(x,y)默认值是1  <1缩小>1放大；<br>   倾斜：transform:skew(x,y) x:正，水平往左 负：右  y:正 垂直往下 负：上；<br>   移动：transform:translate(tx,ty) tx:正：右 负：左  ty:正：下  负：上；<br>     上述方法可以组合使用，但是注意顺序问题，通常把translate()放在最后；<br>      transform-origin:center(默认在元素的中心点) 变形的基准点<br>      rotate,skew,scale可以改变变形的基准点，但是translate()不能改变基准点，永远是元素的中心点</1缩小></p>
+<h2 id="帧动画弥补了过渡动画的缺陷"><a href="#帧动画弥补了过渡动画的缺陷" class="headerlink" title="帧动画弥补了过渡动画的缺陷"></a>帧动画弥补了过渡动画的缺陷</h2><p>   特点：1，可以设置多种状态，可以制作复杂的动画效果<br>         2，不需要触发条件，浏览器加载时直接可运行<br>   语法：实现帧动画需要两个步骤：<br>        1，通过@keyframes 设置动画的运行轨迹<br>        @keyframes move{<br>        0%{ 百分比指时间的百分比<br>        设置css样式<br>           }<br>           50%{<br>           }<br>        100%{<br>           }<br>           }<br>        2，通过animation调用声明的帧动画；<br>          animation-name:move;帧动画的名称（必写）<br>          animation-duration:1s;动画执行的时间（必写）<br>          animation-timing-function:ease(默认值)|lenear….运行的速度<br>          animation-delay:1s;延迟时间<br>          animation-iteration-count:1|infinite(无数次) 动画执行的次数<br>          animation-direction:normal|reverse|alternate|alernate-reverse 动画运行的方向<br>          animation-play-state:running（默认值）|paused(停止)，动画运行的状态<br>          animation-fill-mode:none(默认值：动画运行结束后回到起始状态)|backwards（从第一帧开始运行）|forwards（动画运行结束后停留在最后一帧）|both（开始运行时从第一帧开始，结束时停留在最后一帧）<br>          复合写法：animation: move 1s linear 1s infinite reverse both;<br>…………………………………………………………………..</p>
+<h1 id="3D变形效果"><a href="#3D变形效果" class="headerlink" title="3D变形效果"></a>3D变形效果</h1><p> 在3D空间里展示必须设置如下两个属性：<br>   transform-style:preserve-3d(3D空间里展示)，作用在变形元素的父标签上<br>   perspective:800px  景深效果 （近大远小的效果）， 作用在祖先标签上到Z轴0坐标位置的距离<br>   perspective-origin:center （透视点位置，默认在物体中心点上）<br>   translate3d(tx,ty,tz);translateX(),translateY(),translateZ()先找到正面，往正面的前面移动是正值，则看到的物体变大。<br>   scale3d(sx,sy,sz)<br>   scaleX() scaleY() scaleZ() 单个使用不起作用，必须配合着其他变形方法一起使用才起作用；<br>   rotate3d(rx,ry,rz,a) rx ry rz 向量坐标  a角度<br>   rotateX()正 前翻, 负 后翻<br>   rotateY(),正 右翻  负  左翻<br>   rotateZ() 效果等同于rotate（）效果，但是这个是在Z轴上旋转；</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
